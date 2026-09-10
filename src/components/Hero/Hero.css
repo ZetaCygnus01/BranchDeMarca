@@ -1,0 +1,274 @@
+/* Hero Component Styles - Streetwear & Graffiti Theme */
+
+.street-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc(var(--navbar-height) + 50px);
+  padding-bottom: 70px;
+  background-color: var(--color-background);
+  border-bottom: 2px solid var(--color-117192);
+  overflow: hidden;
+}
+
+/* Corner Markers */
+.hero-corner-mark {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-117192);
+  letter-spacing: 0.12em;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.top-left { top: calc(var(--navbar-height) + 20px); left: 28px; }
+.top-right { top: calc(var(--navbar-height) + 20px); right: 28px; }
+.bottom-left { bottom: 20px; left: 28px; }
+.bottom-right { bottom: 20px; right: 28px; }
+
+.corner-sym {
+  color: var(--color-19D1E6);
+  font-size: 13px;
+}
+
+.corner-tag {
+  font-weight: 700;
+}
+
+.hero-inner-container {
+  position: relative;
+  z-index: 3;
+}
+
+/* Street Eyebrow */
+.hero-street-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  background-color: rgba(8, 52, 76, 0.75);
+  border: 1px solid var(--color-117192);
+  padding: 6px 18px;
+  border-radius: var(--radius-full);
+  margin-bottom: 28px;
+}
+
+.spray-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-19D1E6);
+  box-shadow: 0 0 10px var(--color-19D1E6);
+  animation: spray-pulse 1.8s infinite;
+}
+
+.eyebrow-text {
+  color: var(--color-B3CDD7);
+  font-weight: 600;
+}
+
+.eyebrow-badge {
+  background-color: var(--color-19D1E6);
+  color: #052A3D;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-weight: 800;
+  font-size: 9.5px;
+}
+
+/* Emblem - Clean V Logo */
+.hero-emblem-wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-stencil-svg {
+  width: 105px;
+  height: 105px;
+  filter: drop-shadow(0 0 24px rgba(25, 209, 230, 0.4));
+  transition: transform var(--transition-smooth), filter var(--transition-smooth);
+}
+
+.hero-stencil-svg:hover {
+  transform: translateY(-3px) scale(1.05);
+  filter: drop-shadow(0 0 32px rgba(25, 209, 230, 0.7));
+}
+
+/* Brand Name with Street / Graffiti Aesthetic - Optically Centered */
+.hero-brand-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.hero-brand-name {
+  font-family: var(--font-heading);
+  font-size: clamp(48px, 9.8vw, 118px);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  /* Optically cancel trailing letter-spacing to achieve 100% mathematical & visual centering */
+  padding-left: 0.18em;
+  color: #FFFFFF;
+  line-height: 0.95;
+  text-shadow: 0 0 32px rgba(25, 209, 230, 0.38);
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.hero-tag-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.tag-sticker {
+  font-family: var(--font-tag);
+  font-size: 14.5px;
+  background-color: var(--color-614943);
+  color: #FFFFFF;
+  padding: 5px 18px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transform: rotate(-1.5deg);
+  box-shadow: 2px 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+/* Tagline */
+.hero-tagline-bar {
+  margin-bottom: 20px;
+}
+
+.tagline-street-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(17px, 2.4vw, 24px);
+  font-weight: 700;
+  color: var(--color-19D1E6);
+  letter-spacing: 0.02em;
+}
+
+/* Manifesto */
+.hero-manifesto-text {
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.7;
+  color: var(--color-B3CDD7);
+  max-width: 680px;
+  margin: 0 auto 36px;
+}
+
+/* Action Buttons */
+.hero-actions-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+.street-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-quick);
+  text-transform: uppercase;
+}
+
+.street-btn-primary {
+  background-color: var(--color-19D1E6);
+  color: #052A3D;
+  border: 1px solid var(--color-19D1E6);
+  box-shadow: 0 4px 20px rgba(25, 209, 230, 0.35);
+}
+
+.street-btn-primary:hover {
+  background-color: #55E4F5;
+  box-shadow: 0 6px 28px rgba(25, 209, 230, 0.6);
+  transform: translateY(-2px);
+}
+
+.street-btn-stencil {
+  background-color: rgba(8, 52, 76, 0.6);
+  color: #FFFFFF;
+  border: 1px solid var(--color-117192);
+}
+
+.street-btn-stencil:hover {
+  border-color: var(--color-19D1E6);
+  color: var(--color-19D1E6);
+  background-color: var(--color-surface-hover);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 14px;
+}
+
+/* Technical Cards Grid via Bootstrap */
+.hero-specs-row {
+  margin-top: 10px;
+}
+
+.hero-spec-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-117192);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform var(--transition-quick), border-color var(--transition-quick);
+}
+
+.hero-spec-card:hover {
+  border-color: var(--color-19D1E6);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(5, 42, 61, 0.5);
+}
+
+.spec-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  color: var(--color-19D1E6);
+  font-weight: 700;
+}
+
+.spec-value {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  .hero-corner-mark {
+    display: none;
+  }
+}

@@ -1,0 +1,245 @@
+/*Applications Component Styles - Streetwear & Graffiti */
+
+.applications-street-section {
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-background);
+  border-bottom: 2px solid var(--color-117192);
+}
+
+.app-filter-pill {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-117192);
+  border-radius: var(--radius-sm);
+  color: var(--color-B3CDD7);
+  transition: all var(--transition-quick);
+}
+
+.app-filter-pill:hover {
+  border-color: var(--color-19D1E6);
+  color: #FFFFFF;
+}
+
+.app-filter-pill.is-active {
+  background-color: var(--color-19D1E6);
+  color: #052A3D;
+  border-color: var(--color-19D1E6);
+}
+
+.app-count-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-19D1E6);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* Mockup Cards */
+.mockup-street-card {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-117192);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-quick), border-color var(--transition-quick), box-shadow var(--transition-quick);
+}
+
+.mockup-street-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-19D1E6);
+  box-shadow: 0 12px 32px rgba(5, 42, 61, 0.7);
+}
+
+.mockup-canvas-stage {
+  position: relative;
+  height: 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-117192);
+}
+
+.stage-tee { background: radial-gradient(circle at center, #08344C 0%, #052A3D 100%); }
+.stage-hoodie { background: radial-gradient(circle at center, #0B3F5B 0%, #031C29 100%); }
+.stage-spray { background: radial-gradient(circle at center, #093750 0%, #052A3D 100%); }
+.stage-hangtag { background: radial-gradient(circle at center, #08344C 0%, #031C29 100%); }
+.stage-tote { background: radial-gradient(circle at center, #0A3C58 0%, #052A3D 100%); }
+.stage-box { background: radial-gradient(circle at center, #073147 0%, #031C29 100%); }
+.stage-social { background: #031C29; padding: 12px; }
+
+.mockup-vector {
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+  transition: transform var(--transition-quick);
+}
+
+.mockup-street-card:hover .mockup-vector {
+  transform: scale(1.03);
+}
+
+.stage-zoom-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  background-color: var(--color-19D1E6);
+  color: #052A3D;
+  padding: 4px 10px;
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: all var(--transition-quick);
+}
+
+.mockup-street-card:hover .stage-zoom-badge {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mockup-content-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-category {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--color-19D1E6);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.m-title {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.m-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--color-B3CDD7);
+  margin: 0;
+}
+
+.m-desc strong {
+  color: #FFFFFF;
+}
+
+/* Instagram Street Post */
+.street-insta-box {
+  width: 240px;
+  background-color: #052A3D;
+  border: 1px solid var(--color-117192);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.insta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(17, 113, 146, 0.4);
+}
+
+.insta-avatar-icon {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-19D1E6);
+  color: #052A3D;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.insta-user {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.insta-dots {
+  font-size: 9px;
+  color: var(--color-text-subtle);
+}
+
+.insta-visual-content {
+  height: 140px;
+  background-color: #031C29;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(17, 113, 146, 0.4);
+}
+
+.insta-street-tag {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  letter-spacing: 0.12em;
+  color: var(--color-19D1E6);
+  font-weight: 700;
+}
+
+.insta-street-headline {
+  font-family: var(--font-tag);
+  font-size: 14px;
+  color: #FFFFFF;
+  margin: 0;
+  text-shadow: 0 0 8px var(--color-19D1E6);
+}
+
+.insta-spec-pill {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  background-color: var(--color-614943);
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.insta-bottom {
+  padding: 8px 10px;
+}
+
+.insta-icons {
+  font-size: 11px;
+  color: var(--color-19D1E6);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.insta-caption-small {
+  font-size: 8.5px;
+  color: var(--color-B3CDD7);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.insta-caption-small strong {
+  color: #FFFFFF;
+}
